@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chrono Interlude | Lineage 2 Classic Server</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<style>
+		:root {
+			--primary: #6366f1;
+			--primary-hover: #4f46e5;
+			--surface: #0f172a;
+			--surface-card: #1e293b;
+			--text: #f8fafc;
+			--border: #334155;
+		}
+
+		body {
+			background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+			min-height: 100vh;
+			font-family: 'Segoe UI', system-ui, sans-serif;
+		}
+
+		.glass-card {
+			background: rgba(30, 41, 59, 0.7);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 16px;
+		}
+
+		.gradient-text {
+			background: linear-gradient(90deg, #6366f1, #8b5cf6);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.server-status {
+			display: inline-flex;
+			align-items: center;
+			padding: 4px 12px;
+			background: #10b981;
+			color: white;
+			border-radius: 20px;
+			font-size: 0.9rem;
+		}
+
+		.server-status::before {
+			content: '';
+			width: 8px;
+			height: 8px;
+			background: white;
+			border-radius: 50%;
+			margin-right: 6px;
+			animation: pulse 2s infinite;
+		}
+
+		@keyframes pulse {
+			0% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.5;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.feature-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1.5rem;
+		}
+
+		.stat-badge {
+			font-variant-numeric: tabular-nums;
+			font-weight: 600;
+		}
+
+		.discord-widget {
+			min-height: 300px;
+			background: #5865f2;
+			border-radius: 12px;
+			padding: 1.5rem;
+		}
+
+		.animate-on-scroll {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.6s, transform 0.6s;
+		}
+
+		.animate-on-scroll.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		@media (max-width: 768px) {
+			.feature-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="container-fluid" style="padding: 1rem 0; border-bottom: 1px solid var(--border);">
+		<ul>
+			<li><strong class="gradient-text">Chrono Interlude</strong></li>
+		</ul>
+		<ul>
+			<li><a href="#home">Главная</a></li>
+			<li><a href="#features">Функции</a></li>
+			<li><a href="#stats">Статистика</a></li>
+			<li><a href="#download" role="button">Скачать</a></li>
+		</ul>
+	</nav>
+
+	<main class="container">
+		<!-- Hero Section -->
+		<section id="home" style="padding: 4rem 0; text-align: center;">
+			<h1 style="font-size: 3.5rem; margin-bottom: 1rem;">
+				<span class="gradient-text">Chrono Interlude</span>
+			</h1>
+			<p class="lead" style="font-size: 1.5rem; margin-bottom: 2rem;">
+				Чистая хроника Interlude с современным подходом
+			</p>
+			<div class="server-status">Онлайн: 1,247 игроков</div>
+
+			<div style="margin-top: 3rem;">
+				<a href="#download" role="button" class="contrast" style="margin-right: 1rem;">Начать играть</a>
+				<a href="#discord" role="button" class="outline">Discord сервер</a>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section id="features" style="padding: 4rem 0;">
+			<h2 style="text-align: center; margin-bottom: 3rem;">Особенности сервера</h2>
+			<div class="feature-grid">
+				<article class="glass-card animate-on-scroll" style="padding: 2rem;">
+					<h3>🚫 No Pay-to-Win</h3>
+					<p>Никаких донатных артефактов. Все предметы доступны в игре.</p>
+				</article>
+				<article class="glass-card animate-on-scroll" style="padding: 2rem;">
+					<h3>⚡ Современная инфраструктура</h3>
+					<p>Сервера на SSD NVMe, защита от DDoS, авто-бэкапы.</p>
+				</article>
+				<article class="glass-card animate-on-scroll" style="padding: 2rem;">
+					<h3>🤖 Автоматизация</h3>
+					<p>Авто-ивенты, квесты, система PvP рейтингов.</p>
+				</article>
+				<article class="glass-card animate-on-scroll" style="padding: 2rem;">
+					<h3>📱 Мобильное приложение</h3>
+					<p>Управление аккаунтом, аукцион, чат через приложение.</p>
+				</article>
+			</div>
+		</section>
+
+		<!-- Stats -->
+		<section id="stats" style="padding: 4rem 0;">
+			<h2 style="text-align: center; margin-bottom: 3rem;">Статистика в реальном времени</h2>
+			<div class="grid" style="text-align: center;">
+				<div class="stat-badge">
+					<div style="font-size: 3rem; color: var(--primary);">1,247</div>
+					<div>Онлайн игроков</div>
+				</div>
+				<div class="stat-badge">
+					<div style="font-size: 3rem; color: var(--primary);">87</div>
+					<div>Активных кланов</div>
+				</div>
+				<div class="stat-badge">
+					<div style="font-size: 3rem; color: var(--primary);">24/7</div>
+					<div>Аптайм сервера</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Discord Widget -->
+		<section id="discord" style="padding: 4rem 0;">
+			<div class="discord-widget">
+				<h3 style="color: white;">Присоединяйтесь к нашему Discord</h3>
+				<p style="color: rgba(255,255,255,0.9);">Обсуждайте игру, находите партии, участвуйте в розыгрышах</p>
+				<button onclick="window.open('https://discord.gg/...')" style="margin-top: 1rem;">Подключиться</button>
+			</div>
+		</section>
+	</main>
+
+	<footer style="text-align: center; padding: 2rem 0; border-top: 1px solid var(--border);">
+		<small>© 2024 Chrono Interlude. Lineage 2 является товарным знаком NCsoft. Сервер не аффилирован с NCsoft.</small>
+	</footer>
+
+	<script>
+		// Intersection Observer для анимаций при скролле
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, { threshold: 0.1 });
+
+		document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+		// Обновление онлайн-счетчика (заглушка)
+		function updateOnlineCount() {
+			const baseCount = 1247;
+			const variation = Math.floor(Math.random() * 50) - 25;
+			const count = Math.max(1000, baseCount + variation);
+			document.querySelector('.server-status').textContent = `Онлайн: ${count} игроков`;
+		}
+
+		setInterval(updateOnlineCount, 30000);
+	</script>
+</body>
+
+</html>
