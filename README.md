@@ -31,7 +31,7 @@ https://vasso89.github.io/lineage2_site/
 ## Author
 Vasily Myshkin- Beginner Frontend Developer
 - GitHub: @vasso89
-- Portfolio: vasso89.github.io/Portfolio
+- Portfolio: https://vasso89.github.io/Portfolio/
 
 ## Credits
 - Design template from Figma Community
