@@ -115,9 +115,7 @@ margin-left: 28px;
 	grid-template-columns: repeat(3, 332px);
 	gap: 32px;
 	justify-content: center;
-	
 	height: 140px;
-	
 }
 
 h3 {
@@ -152,6 +150,8 @@ footer {
 	padding-top: 269px;
 	font-family: "Jost", sans-serif;
 	font-weight: 400;
+
+	
 }
 
 .line {
@@ -163,9 +163,11 @@ background: rgba(244, 147, 60, 1);
 }
 .low-info {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding-top: 24px;
+	max-width: 1061px;
+	margin: 0 auto;
 }
 .low-menu {
 	color: rgba(255, 255, 255, 0.6);
@@ -208,13 +210,35 @@ text-align: right;
 
 		margin: 10px 0 ;
 }
+.server-details {
+	
+	grid-template-columns: repeat(2, 332px);
+}
+.main-info {
+margin: 200px auto 100px;
+}
+
+footer {
+	padding-top: 400px;
+}
+
+.line {
+	width: 100%;
+}
+.low-info {
+justify-content: space-around;
+	max-width: 100%;
+	
+}
+
 }
 
 @media screen and (max-width:1024px) {
 
 	.main-info {
-		margin: 280px auto;
+		margin: 200px auto 100px;
 	}
+
 
 }
 @media screen and (max-width:768px) {
@@ -222,7 +246,7 @@ text-align: right;
 	flex-direction: column;
 }
 	.main-info {
-		margin: 50px auto;
+		margin: 50px auto 50px;
 		gap: 20px;
 	}
 
@@ -238,4 +262,38 @@ text-align: right;
 	.buttons-main button:nth-child(2) {
 margin-left: 0px;
 }
+.server-details {
+	
+	grid-template-columns: repeat(1, 332px);
+}
+
+footer {
+	padding-top: 900px;
+}
+
+
+.low-info {
+	flex-direction: column;
+}
+.low-menu {
+	margin-bottom:0 auto 10px;
+
+}
+}
+
+
+@media screen and (max-width:375px) {
+	
+.low-menu ul {
+	display: flex;
+	flex-direction: column;
+}
+.low-info {
+	padding: 0;
+}
+.server-details {
+	grid-template-columns: repeat(1, 1fr);
+	margin: 0 10px;
+}
+
 }
